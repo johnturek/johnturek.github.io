@@ -1,15 +1,25 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
+        <loc>
+            http://johnturek.github.io/blog/2014/02/27/zombie-ninjas-attack-a-survivors-retrospective/
+        </loc>
+        <lastmod>2014-02-27T23:46:22-05:00</lastmod>
+    </url>
+    <url>
         <loc>http://johnturek.github.io/blog/archives/</loc>
-        <lastmod>2014-02-27T23:32:30-05:00</lastmod>
+        <lastmod>2014-02-27T23:46:22-05:00</lastmod>
     </url>
     <url>
         <loc>http://johnturek.github.io/</loc>
-        <lastmod>2014-02-27T23:32:31-05:00</lastmod>
+        <lastmod>2014-02-27T23:46:22-05:00</lastmod>
     </url>
     <url>
         <loc>http://johnturek.github.io/robots.txt</loc>
         <lastmod>2014-02-27T23:32:31-05:00</lastmod>
+    </url>
+    <url>
+        <loc>http://johnturek.github.io/super-awesome/page.html</loc>
+        <lastmod>2014-02-27T23:39:26-05:00</lastmod>
     </url>
 </urlset>
