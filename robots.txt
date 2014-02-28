@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: 
+
+Sitemap: http://johnturek.github.io/sitemap.xml 
