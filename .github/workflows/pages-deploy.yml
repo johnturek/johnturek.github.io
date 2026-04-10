@@ -30,6 +30,13 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Debug - list files
+        run: |
+          echo "PWD: $(pwd)"
+          echo "GITHUB_WORKSPACE: $GITHUB_WORKSPACE"
+          ls -la $GITHUB_WORKSPACE
+          cat $GITHUB_WORKSPACE/Gemfile
+
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
