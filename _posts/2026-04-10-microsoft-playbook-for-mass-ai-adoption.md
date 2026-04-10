@@ -1,6 +1,13 @@
 ---
 layout: post
 title: The Microsoft Playbook for Mass AI Adoption
+author: John Turek
+tags:
+  - AI
+  - Microsoft
+  - Copilot
+  - Automation
+  - Strategy
 ---
 
 *How to turn Copilot, Power Platform, GitHub Copilot, and Azure AI into real organizational change*

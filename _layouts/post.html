@@ -2,15 +2,48 @@
 layout: default
 ---
 
-<article class="post">
-  <h1>{{ page.title }}</h1>
+<article class="post reading-width">
+  <header class="article-header">
+    <div class="article-kicker">Article</div>
+    <h1 class="article-title">{{ page.title }}</h1>
+    {% if page.excerpt %}
+      <p class="article-dek">{{ page.excerpt | strip_html }}</p>
+    {% endif %}
+
+    <div class="article-meta-wrap">
+      <div class="author-block">
+        <div class="author-label">Byline</div>
+        <div class="author-name">{{ page.author | default: site.author.name | default: site.name }}</div>
+        {% if site.author.role %}
+          <div class="author-role">{{ site.author.role }}</div>
+        {% endif %}
+      </div>
+
+      <div class="article-meta-grid">
+        <div class="article-meta-card">
+          <div class="article-meta-label">Published</div>
+          <div class="article-meta-value">{{ page.date | date: "%B %e, %Y" }}</div>
+        </div>
+        <div class="article-meta-card">
+          <div class="article-meta-label">Reading time</div>
+          <div class="article-meta-value">{{ content | number_of_words | divided_by: 180 | plus: 1 }} min read</div>
+        </div>
+        {% if page.tags and page.tags.size > 0 %}
+        <div class="article-meta-card article-meta-card-tags">
+          <div class="article-meta-label">Tags</div>
+          <div class="tag-list">
+            {% for tag in page.tags %}
+              <span class="tag-pill">{{ tag }}</span>
+            {% endfor %}
+          </div>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </header>
 
   <div class="entry">
     {{ content }}
-  </div>
-
-  <div class="date">
-    Written on {{ page.date | date: "%B %e, %Y" }}
   </div>
 
   {% include disqus.html %}
