@@ -1,89 +1,108 @@
-#
-# This file contains configuration flags to customize your site
-#
+# The Site Configuration
+theme: jekyll-theme-chirpy
 
-# Name of your site (displayed in the header)
-name: John Turek
-# Short bio or description (displayed in the header)
-description: AI, Microsoft, automation, and practical technology
+lang: en
+timezone: America/New_York
 
-# URL of your avatar or profile pic (you could use your GitHub profile pic)
-avatar: https://github.com/johnturek.png
+title: John Turek
+tagline: AI, Microsoft, automation, and practical technology
 
-author:
+description: >-
+  Writing about AI adoption, Microsoft technology, automation, and building things that actually work.
+
+url: "https://johnturek.github.io"
+
+github:
+  username: johnturek
+
+social:
   name: John Turek
-  role: Technology leader, builder, and writer
+  email: ""
+  links:
+    - https://github.com/johnturek
+    - https://linkedin.com/in/johnturek
 
-#
-# Flags below are optional
-#
+avatar: "https://github.com/johnturek.png"
 
-# Includes an icon in the footer for each username you enter
-footer-links:
-  dribbble:
-  email:
-  facebook:
-  flickr:
-  github: johnturek
-  instagram:
-  linkedin: johnturek
-  pinterest:
-  rss: # just type anything here for a working RSS icon
-  twitter:
-  stackoverflow: # your stackoverflow profile, e.g. "users/50476/bart-kiers"
-  youtube: # channel/<your_long_string> or user/<user-name>
-  googleplus: # anything in your profile username that comes after plus.google.com/
+toc: true
 
+comments:
+  provider:
 
-# Enter your Disqus shortname (not your username) to enable commenting on posts
-# You can find your shortname on the Settings page of your Disqus account
-disqus:
+pwa:
+  enabled: true
+  cache:
+    enabled: true
 
-# Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
-google_analytics:
+paginate: 10
 
-# Your website URL (e.g. http://barryclark.github.io or http://www.barryclark.co)
-# Used for Sitemap.xml and your RSS feed
-url:
-
-# If you're hosting your site at a Project repository on GitHub pages
-# (http://yourusername.github.io/repository-name)
-# and NOT your User repository (http://yourusername.github.io)
-# then add in the baseurl here, like this: "/repository-name"
 baseurl: ""
 
-#
-# !! You don't need to change any of the configuration flags below !!
-#
+permalink: /posts/:title/
 
-permalink: /:title/
-
-# The release of Jekyll Now that you're using
-version: v1.2.0
-
-# Jekyll 3 now only supports Kramdown for Markdown
 kramdown:
-  # Use GitHub flavored markdown, including triple backtick fenced code blocks
-  input: GFM
-  # Jekyll 3 and GitHub Pages now only support rouge for syntax highlighting
+  footnote_backlink: "&#8617;&#xfe0e;"
   syntax_highlighter: rouge
   syntax_highlighter_opts:
-    # Use existing pygments syntax highlighting css
-    css_class: 'highlight'
+    css_class: highlight
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+      start_line: 1
 
-# Set the Sass partials directory, as we're using @imports
+collections:
+  tabs:
+    output: true
+    sort_by: order
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      comments: true
+      toc: true
+      permalink: /posts/:title/
+  - scope:
+      path: _drafts
+    values:
+      comments: false
+  - scope:
+      path: ""
+      type: tabs
+    values:
+      layout: page
+      permalink: /:title/
+
 sass:
-  style: :expanded # You might prefer to minify using :compressed
+  style: compressed
 
-# Use the following plug-ins
-gems:
-  - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
-  - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  profile: false
+  blanklines: false
+  ignore:
+    envs: [development]
 
-# Exclude these files from your production _site
 exclude:
-  - Gemfile
-  - Gemfile.lock
-  - LICENSE
+  - "*.gem"
+  - "*.gemspec"
+  - docs
+  - tools
   - README.md
-  - CNAME
+  - LICENSE
+  - "*.config.js"
+  - "package*.json"
+
+jekyll-archives:
+  enabled: [categories, tags]
+  layouts:
+    category: category
+    tag: tag
+  permalinks:
+    tag: /tags/:name/
+    category: /categories/:name/

@@ -1,38 +1,36 @@
 ---
 layout: post
 title: The Microsoft Playbook for Mass AI Adoption
-author: John Turek
-tags:
-  - AI
-  - Microsoft
-  - Copilot
-  - Automation
-  - Strategy
+date: 2026-04-10 00:00:00 +0000
+author: john_turek
+categories: [AI, Microsoft]
+tags: [ai, microsoft, copilot, automation, strategy]
+description: How to turn Copilot, Power Platform, GitHub Copilot, and Azure AI into real organizational change.
 ---
 
 *How to turn Copilot, Power Platform, GitHub Copilot, and Azure AI into real organizational change*
 
 Most companies are still debating their AI strategy.
 
-They’re overthinking it.
+They're overthinking it.
 
-The companies getting real leverage from AI are not the ones with the prettiest roadmap deck or the most polished AI messaging. They’re the ones that started, learned fast, and kept going. They made AI part of daily work before they had every answer. They gave people tools they could actually use. Then they raised the bar as the tools got better.
+The companies getting real leverage from AI are not the ones with the prettiest roadmap deck or the most polished AI messaging. They're the ones that started, learned fast, and kept going. They made AI part of daily work before they had every answer. They gave people tools they could actually use. Then they raised the bar as the tools got better.
 
-That’s the playbook.
+That's the playbook.
 
-If your organization is already running on Microsoft, you have more than enough to begin. Microsoft 365 Copilot, Copilot Chat, Teams, SharePoint, OneDrive, Power Platform, GitHub Copilot, Copilot Studio, Azure AI, Power BI, and Fabric are already a strong foundation. The opportunity is not just to deploy those tools. It’s to make them part of how work happens across the organization.
+If your organization is already running on Microsoft, you have more than enough to begin. Microsoft 365 Copilot, Copilot Chat, Teams, SharePoint, OneDrive, Power Platform, GitHub Copilot, Copilot Studio, Azure AI, Power BI, and Fabric are already a strong foundation. The opportunity is not just to deploy those tools. It's to make them part of how work happens across the organization.
 
 That is where most AI strategies break down.
 
 The real challenge is not technical.
 
-It’s cultural.
+It's cultural.
 
 ## 1. The second-best time to start is today
 
 A lot of organizations are waiting for the perfect AI strategy.
 
-That’s a mistake.
+That's a mistake.
 
 You do not need every governance question answered before people start using Microsoft 365 Copilot in Outlook, Word, Excel, Teams, and PowerPoint. You do not need a giant transformation office before teams start experimenting with Power Automate. You do not need a six-month planning cycle before developers start using GitHub Copilot.
 
@@ -112,7 +110,7 @@ Once the tools are good enough, expectations should go up.
 
 This is where a lot of companies get timid. They treat AI like a nice optional extra forever.
 
-That won’t hold.
+That won't hold.
 
 AI proficiency is quickly becoming part of basic professional competence. If someone spends their day in Outlook, Teams, Word, and Excel, they should know how to use Copilot well. If someone owns workflows, they should be thinking about Power Automate and Copilot Studio. If someone builds systems, GitHub Copilot and Azure AI should be part of the toolkit.
 
@@ -268,6 +266,6 @@ Microsoft gives organizations a strong foundation for that journey.
 
 But adoption does not come from licenses.
 
-It comes from expectation, enablement, visibility, and the willingness to replace yesterday’s best ideas with better ones.
+It comes from expectation, enablement, visibility, and the willingness to replace yesterday's best ideas with better ones.
 
 That is how mass AI adoption happens.
