@@ -213,4 +213,4 @@ That's not a feature advantage. That's a category lock.
 
 ---
 
-*This is Part 1 of the "Microsoft AI Stack Decoded" series. [Subscribe](#) to get notified when Part 2 drops.*
+*This is Part 1 of the "Microsoft AI Stack Decoded" series. [Part 2](/posts/microsoft-ai-stack-part-2-agent-framework/) is now live.*
