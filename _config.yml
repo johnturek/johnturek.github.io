@@ -4,6 +4,9 @@ theme: jekyll-theme-chirpy
 lang: en
 timezone: America/New_York
 
+# Publish posts dated today even if server is in different timezone
+future: true
+
 title: John Turek
 tagline: AI, Microsoft, automation, and practical technology
 
