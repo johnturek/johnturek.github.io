@@ -16,20 +16,23 @@ Here's how we did it, what worked, what didn't, and what I'd do differently next
 
 ## The Brief
 
-A large federal organization wanted their technical and leadership teams to understand what's actually possible with Microsoft's AI stack — specifically Copilot Studio, Azure AI Foundry, and how to connect the two securely. Not theory. Not slides. Working code they could extend after we left.
+A federal customer wanted their technical and leadership teams to understand what's actually possible with Microsoft's AI stack — specifically Copilot Studio, Azure AI Foundry, and how to connect the two securely. Not theory. Not slides. Working code they could extend after we left.
+
+We researched the customer's environment, collaborated across a team of Microsoft engineers, and iterated on the content using GitHub Copilot to accelerate development. The whole repo went from first commit to workshop-ready in about 10 days.
 
 The constraints:
 - **GCC tenant** — government cloud, which means half the features you see in demos don't work the same way
 - **Mixed audience** — executives who needed to understand the "why" and engineers who needed to build the "how"
 - **One day** — 6 hours total, including lunch
 - **Zero local installs** — participants couldn't install software on their machines
+- **Customer environment uncertainty** — we didn't have full access to their tenant until day-of
 
 ## The Approach: Least to Most Technical
 
 We structured the day in three blocks, ordered from most accessible to most technical:
 
 **Session 1 — Copilot Studio (Everyone)**
-Build an AI agent from scratch. No code required. Executives and engineers side by side, same exercise. By 11 AM, every person in the room had a working agent that could answer questions about the organization's domain.
+Build an AI agent from scratch. No code required. Executives and engineers side by side, same exercise. By 11 AM, every person in the room had a working agent that could answer questions about their domain.
 
 **Lunch — Executive Working Session**
 While the technical team ate, our account lead ran a separate strategy discussion with leadership: what they saw in the morning, where it fits in their roadmap, what the pilot looks like.
@@ -79,7 +82,11 @@ If you're running AI workshops in government environments, here's what nobody te
 
 **Features are gated.** Bing Search? Disabled by default. AI Builder Vision? Disabled. Exchange OData access for Copilot? Blocked by allowlist. Each of these showed up as a surprise during the live session. We adapted in real time, but I'd rather have known in advance.
 
-**My recommendation:** Do a full dry run in the actual GCC tenant at least 48 hours before the workshop. Every feature you plan to demo, click through it. The feature matrix between commercial and GCC is a moving target.
+**The pivot nobody saw coming:** On workshop morning, we discovered the customer's environment had restrictions we couldn't work around in time — admin-gated features, blocked user agents, disabled capabilities. Instead of spending the first hour troubleshooting, we made a call: spin everything up on our own tenant. Within minutes, we had a working environment and the workshop continued without a hitch. The participants never felt the scramble.
+
+This is why the repo-first approach matters. Because the entire workshop was code and markdown — not slides and prayers — we could redeploy the whole thing to a different tenant and keep moving. If we'd built the workshop around a specific pre-configured environment, we'd have been dead in the water.
+
+**My recommendation:** Always have a fallback tenant ready. Do a full dry run in the actual customer environment at least 48 hours before, but assume something will break. The feature matrix between commercial and GCC is a moving target.
 
 ## What Worked
 
@@ -87,7 +94,7 @@ If you're running AI workshops in government environments, here's what nobody te
 
 **Least-to-most technical ordering.** Executives got value in the first two hours and left at lunch feeling informed, not overwhelmed. Engineers got the deep dive they wanted in the afternoon without executives asking "but what does this mean for our budget?" every 10 minutes.
 
-**The use case brainstorm.** This was the highest-energy part of the day. Teams pitched agent ideas specific to their workflows. One team designed a compliance document processor. Another built a concept for automated regulatory cross-referencing. These weren't our ideas — they were theirs. That's the point.
+**The use case brainstorm.** This was the highest-energy part of the day. Teams pitched agent ideas specific to their actual workflows. One team designed a document processing assistant. Another built a concept for automated cross-referencing of internal policies. These weren't our ideas — they were theirs. That's the point.
 
 **Task runner abstraction.** `npx just provision` instead of "now run these 14 Azure CLI commands." The `just-task` setup meant we could hide complexity without removing it. Participants who wanted to see what was happening under the hood could read `just.config.js`.
 
